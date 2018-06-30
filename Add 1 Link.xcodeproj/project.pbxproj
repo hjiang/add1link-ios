@@ -55,6 +55,8 @@
 		DA11A4F320E61C4800CD2F0F /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DA11A4F520E61E1E00CD2F0F /* graphql */ = {isa = PBXFileReference; lastKnownFileType = folder; path = graphql; sourceTree = "<group>"; };
 		DA11A4F720E61FDC00CD2F0F /* LinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksViewController.swift; sourceTree = "<group>"; };
+		DA11A4F920E78C7600CD2F0F /* Add 1 Link.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Add 1 Link.entitlements"; sourceTree = "<group>"; };
+		DA11A4FA20E78DF100CD2F0F /* Save Link.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Save Link.entitlements"; sourceTree = "<group>"; };
 		DA293E6020E0AFAD002E7CCD /* Add 1 Link.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Add 1 Link.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA293E6320E0AFAD002E7CCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA293E6520E0AFAD002E7CCD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		DA293E6220E0AFAD002E7CCD /* Add 1 Link */ = {
 			isa = PBXGroup;
 			children = (
+				DA11A4F920E78C7600CD2F0F /* Add 1 Link.entitlements */,
 				DA11A4F520E61E1E00CD2F0F /* graphql */,
 				DA11A4F320E61C4800CD2F0F /* API.swift */,
 				DA293E6320E0AFAD002E7CCD /* AppDelegate.swift */,
@@ -148,6 +151,7 @@
 		DA293E7A20E0B071002E7CCD /* Save Link */ = {
 			isa = PBXGroup;
 			children = (
+				DA11A4FA20E78DF100CD2F0F /* Save Link.entitlements */,
 				DA293E7B20E0B071002E7CCD /* ShareViewController.swift */,
 				DA293E7D20E0B071002E7CCD /* MainInterface.storyboard */,
 				DA293E8020E0B071002E7CCD /* Info.plist */,
@@ -210,9 +214,19 @@
 				TargetAttributes = {
 					DA293E5F20E0AFAD002E7CCD = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					DA293E7820E0B071002E7CCD = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -507,6 +521,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Add 1 Link/Add 1 Link.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WAFM85X96L;
 				INFOPLIST_FILE = "Add 1 Link/Info.plist";
@@ -514,7 +529,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.1byte.Add-1-Link";
+				PRODUCT_BUNDLE_IDENTIFIER = link.add1.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -527,6 +542,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Add 1 Link/Add 1 Link.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WAFM85X96L;
 				INFOPLIST_FILE = "Add 1 Link/Info.plist";
@@ -534,7 +550,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.1byte.Add-1-Link";
+				PRODUCT_BUNDLE_IDENTIFIER = link.add1.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -545,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EFF24901ECBF6148EABFD85D /* Pods-Save Link.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Save Link/Save Link.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WAFM85X96L;
 				INFOPLIST_FILE = "Save Link/Info.plist";
@@ -553,7 +570,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.1byte.Add-1-Link.Save-Link";
+				PRODUCT_BUNDLE_IDENTIFIER = "link.add1.ios.Save-Link";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -565,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09E02BF20C7D1BAD22E7B90C /* Pods-Save Link.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Save Link/Save Link.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WAFM85X96L;
 				INFOPLIST_FILE = "Save Link/Info.plist";
@@ -573,7 +591,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.1byte.Add-1-Link.Save-Link";
+				PRODUCT_BUNDLE_IDENTIFIER = "link.add1.ios.Save-Link";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;

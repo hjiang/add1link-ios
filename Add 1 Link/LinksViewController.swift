@@ -10,6 +10,7 @@ import UIKit
 
 class LinksViewController: UIViewController {
   var authenticatedEmail: String?
+  var defaults: UserDefaults? = nil
 
   @IBOutlet weak var debugLabel: UILabel!
 
@@ -27,6 +28,12 @@ class LinksViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+  @IBAction func LogoutPressed(_ sender: Any) {
+    defaults?.removeObject(forKey: "token")
+    defaults?.removeObject(forKey: "email")
+    defaults?.synchronize()
+    dismiss(animated: true, completion: nil)
+  }
 
     /*
     // MARK: - Navigation
