@@ -1,0 +1,8 @@
+mutation SaveLink($url: String!, $title: String) {
+  saveLink(url: $url, title: $title) {
+    id
+    title
+    url
+    createdAt
+  }
+}

@@ -10,8 +10,8 @@
 		67C5BA772C5DFB82B962BD8F /* Pods_Add_1_Link.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500F77BFC4CC6115AB3936CE /* Pods_Add_1_Link.framework */; };
 		B0A0715D3F9FC12E4A1B1CC4 /* Pods_Save_Link.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA87C371D6DD0BB418B8761 /* Pods_Save_Link.framework */; };
 		DA11A4F420E61C4800CD2F0F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11A4F320E61C4800CD2F0F /* API.swift */; };
-		DA11A4F620E61E1E00CD2F0F /* graphql in Resources */ = {isa = PBXBuildFile; fileRef = DA11A4F520E61E1E00CD2F0F /* graphql */; };
 		DA11A4F820E61FDC00CD2F0F /* LinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11A4F720E61FDC00CD2F0F /* LinksViewController.swift */; };
+		DA11A50120E7A93800CD2F0F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11A50020E7A93700CD2F0F /* API.swift */; };
 		DA293E6420E0AFAD002E7CCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA293E6320E0AFAD002E7CCD /* AppDelegate.swift */; };
 		DA293E6620E0AFAD002E7CCD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA293E6520E0AFAD002E7CCD /* LoginViewController.swift */; };
 		DA293E6920E0AFAD002E7CCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA293E6720E0AFAD002E7CCD /* Main.storyboard */; };
@@ -53,10 +53,10 @@
 		CAFBDE617C684F28C0E79299 /* Pods-Add 1 Link.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Add 1 Link.release.xcconfig"; path = "Pods/Target Support Files/Pods-Add 1 Link/Pods-Add 1 Link.release.xcconfig"; sourceTree = "<group>"; };
 		D5396E9A4495D11451D682D2 /* Pods-Add 1 Link.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Add 1 Link.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Add 1 Link/Pods-Add 1 Link.debug.xcconfig"; sourceTree = "<group>"; };
 		DA11A4F320E61C4800CD2F0F /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		DA11A4F520E61E1E00CD2F0F /* graphql */ = {isa = PBXFileReference; lastKnownFileType = folder; path = graphql; sourceTree = "<group>"; };
 		DA11A4F720E61FDC00CD2F0F /* LinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksViewController.swift; sourceTree = "<group>"; };
 		DA11A4F920E78C7600CD2F0F /* Add 1 Link.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Add 1 Link.entitlements"; sourceTree = "<group>"; };
 		DA11A4FA20E78DF100CD2F0F /* Save Link.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Save Link.entitlements"; sourceTree = "<group>"; };
+		DA11A50020E7A93700CD2F0F /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DA293E6020E0AFAD002E7CCD /* Add 1 Link.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Add 1 Link.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA293E6320E0AFAD002E7CCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA293E6520E0AFAD002E7CCD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				DA11A4F920E78C7600CD2F0F /* Add 1 Link.entitlements */,
-				DA11A4F520E61E1E00CD2F0F /* graphql */,
 				DA11A4F320E61C4800CD2F0F /* API.swift */,
 				DA293E6320E0AFAD002E7CCD /* AppDelegate.swift */,
 				DA293E6520E0AFAD002E7CCD /* LoginViewController.swift */,
@@ -151,6 +150,7 @@
 		DA293E7A20E0B071002E7CCD /* Save Link */ = {
 			isa = PBXGroup;
 			children = (
+				DA11A50020E7A93700CD2F0F /* API.swift */,
 				DA11A4FA20E78DF100CD2F0F /* Save Link.entitlements */,
 				DA293E7B20E0B071002E7CCD /* ShareViewController.swift */,
 				DA293E7D20E0B071002E7CCD /* MainInterface.storyboard */,
@@ -256,7 +256,6 @@
 			files = (
 				DA293E6E20E0AFAE002E7CCD /* LaunchScreen.storyboard in Resources */,
 				DA293E6B20E0AFAE002E7CCD /* Assets.xcassets in Resources */,
-				DA11A4F620E61E1E00CD2F0F /* graphql in Resources */,
 				DA293E6920E0AFAD002E7CCD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,7 +337,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name '*.graphql') --schema schema.json --output API.swift\n";
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find .. -name '*.graphql') --schema ../schema.json --output API.swift\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -359,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA11A50120E7A93800CD2F0F /* API.swift in Sources */,
 				DA293E7C20E0B071002E7CCD /* ShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
