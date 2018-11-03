@@ -17,7 +17,7 @@ class LinksViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    debugLabel.text = authenticatedEmail
+    debugLabel.text = authenticatedEmail!
 
         // Do any additional setup after loading the view.
 
